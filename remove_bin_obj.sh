@@ -1,0 +1,1 @@
+find . -type d -iname "bin" -o -iname "obj" | xargs rm -r

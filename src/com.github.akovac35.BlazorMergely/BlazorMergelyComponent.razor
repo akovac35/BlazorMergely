@@ -1,0 +1,16 @@
+@inherits ComponentBase
+
+<div class="mergely-full-screen-8">
+	<header style="margin-bottom:10px">
+		@if(!string.IsNullOrEmpty(Title))
+		{
+			<h3>@Title</h3>
+		}
+		
+        <button id=@(HtmlId+"-wrap") onclick=@($"BlazorMergely.toggleLineWrapping(\"#{HtmlId}\")") >Toggle line wrapping</button>
+    </header>
+	<div class="mergely-resizer">
+	<div id=@HtmlId></div>
+	</div>
+</div>
+
