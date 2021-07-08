@@ -25,6 +25,8 @@ PRODUCTION READY starting from version 1.0.0.
 Update _Host.cshtml file with static file references as follows:
 
 ```cshtml
+@using com.github.akovac35.BlazorMergely
+
 @* BlazorMergely CSS references *@
 <component type="typeof(BlazorMergelyCssReferences)" render-mode="Static"/>
 
@@ -32,7 +34,7 @@ Update _Host.cshtml file with static file references as follows:
 <component type="typeof(BlazorMergelyJsReferences)" render-mode="Static"/>
 ```
 
-The above may not meet some specific criteria like jQuery version etc. In that case simply add the required static file references manually:
+The above may not meet some specific application criteria like jQuery version etc. In that case simply add the required static file references manually, as per the following examples:
 
 * [BlazorMergelyCssReferences](src/com.github.akovac35.BlazorMergely/BlazorMergelyCssReferences.razor)
 * [BlazorMergelyJsReferences](src/com.github.akovac35.BlazorMergely/BlazorMergelyJsReferences.cs)
@@ -40,6 +42,8 @@ The above may not meet some specific criteria like jQuery version etc. In that c
 Then use the component as follows:
 
 ```razor
+@using com.github.akovac35.BlazorMergely
+
 <div class="form-row">
 	<div class="col-3">
 		<button @onclick=@PrintContentsToConsoleOnServerSide>Print contents to console on server side</button>
@@ -80,6 +84,8 @@ Then use the component as follows:
 	}
 }
 ```
+
+All methods and properties are listed here: [BlazorMergelyComponent.razor.cs](src/com.github.akovac35.BlazorMergely/BlazorMergelyComponent.razor.cs)
 
 ## Samples
 
