@@ -4,6 +4,10 @@ An implementation of Blazor diff and merge component based on Mergely with serve
 
 ![this](Resources/.NET_Core_Logo_small.png)
 
+* [com.github.akovac35.BlazorMergely](https://www.nuget.org/packages/com.github.akovac35.BlazorMergely/)
+
+	[![NuGet Version](http://img.shields.io/nuget/v/com.github.akovac35.BlazorMergely.svg?style=flat)](https://www.nuget.org/packages/com.github.akovac35.BlazorMergely/)
+
 Browser functionality:
 
 ![this](Resources/simple-showcase.gif)

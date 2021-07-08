@@ -5,11 +5,11 @@
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     
     <Version>1.0.0</Version>
-    <Description>Blazor text diff and merge control.</Description>
+    <Description>An implementation of Blazor diff and merge component based on Mergely with server side support.</Description>
     <Authors>Aleksander Kovač</Authors>
     <PackageTags>blazor;text;diff;merge</PackageTags>
     <RepositoryUrl>https://github.com/akovac35/BlazorMergely</RepositoryUrl>
-    <PackageLicenseExpression>LGPL</PackageLicenseExpression>
+    <PackageLicenseExpression>LGPL-2.1-or-later</PackageLicenseExpression>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PackageIcon>.NET_Core_Logo.png</PackageIcon>
