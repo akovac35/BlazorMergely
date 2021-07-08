@@ -1,28 +1,6 @@
 @page "/blazormergelysimpletest"
 
-<div class="form-group row">
-	<label for="langMode" class="col-form-label">Set language mode</label>
-	<div class="col-3">
-		<input id="langMode" type="text" class="form-control" value="@(TestModelInstance.LangMode)" @onchange=@((ChangeEventArgs __e) => LangModeChangedAsync(__e.Value?.ToString()))/>
-		<small class="text-muted">See Code Mirror mode documentation. E.g.: javascript, text/x-csharp</small>
-	</div>
-</div>
-
-<div class="form-group row">
-	<label for="leftSideValue" class="col-form-label">Set left side value</label>
-	<div class="col-3">
-		<textarea id="leftSideValue" rows="3" class="form-control" value="@(TestModelInstance.LeftValue)" @onchange=@((ChangeEventArgs __e) => ValueChangedAsync(__e.Value?.ToString(), BlazorMergelyComponent.MergelySide.LEFT))/>
-	</div>
-</div>
-
-<div class="form-group row">
-	<label for="rightSideValue" class="col-form-label">Set right side value</label>
-	<div class="col-3">
-		<textarea id="rightSideValue" rows="3" class="form-control" value="@(TestModelInstance.RightValue)" @onchange=@((ChangeEventArgs __e) => ValueChangedAsync(__e.Value?.ToString(), BlazorMergelyComponent.MergelySide.RIGHT))/>
-	</div>
-</div>
-
-<div class="form-group row">
+<div class="form-row">
 	<div class="col-3">
 		<button @onclick=@PrintContentsToConsoleOnServerSide>Print contents to console on server side</button>
 	</div>
@@ -33,15 +11,12 @@
 
 <div class="form-row">
 	<div class="col" style="height:400px">
-		<BlazorMergelyComponent @ref="BlazorMergelyComponentInstance" Title="Test title (optional)" MergelyOptions=@MergelyOptions HtmlId=@BlazorMergelyComponentId />
+		<BlazorMergelyComponent @ref="BlazorMergelyComponentInstance" MergelyOptions=@MergelyOptions />
 	</div>
 </div>
 
-
-
 @code{
 	private BlazorMergelyComponent? BlazorMergelyComponentInstance { get; set; }
-	private string BlazorMergelyComponentId { get; set; } = "bm1"; // This is optional
 	private string MergelyOptions { get; set; } = "{\"cmsettings\":{\"mode\":\"text/javascript\",\"readOnly\":false,\"styleSelectedText\": true}}"; // This is optional
 	
 	private TestModel TestModelInstance { get; set; } = new() { LeftValue = "var x = 0;", RightValue = "var y = 0;" };
@@ -55,26 +30,6 @@
 		{
 			await BlazorMergelyComponentInstance!.SetValueAsync(TestModelInstance.LeftValue, TestModelInstance.RightValue);
 		}
-	}
-
-	private ValueTask LangModeChangedAsync(string? value)
-	{
-		TestModelInstance.LangMode = value;
-		return BlazorMergelyComponentInstance!.ChangeLangDisplayModeAsync(value);
-	}
-
-    private ValueTask ValueChangedAsync(string? value, BlazorMergelyComponent.MergelySide side)
-    {
-		if (side == BlazorMergelyComponent.MergelySide.LEFT)
-		{
-			TestModelInstance.LeftValue = value;
-		}
-		else
-		{
-			TestModelInstance.RightValue = value;
-		}
-		
-		return BlazorMergelyComponentInstance!.SetValueAsync(value, side);
 	}
 
 	private async Task PrintContentsToConsoleOnServerSide(MouseEventArgs args)
