@@ -20,15 +20,6 @@ Interaction with the server:
 
 PRODUCTION READY starting from version 1.0.0.
 
-## Samples
-
-Review the following samples:
-
-* [BlazorMergelySimpleTest](instance/BlazorMergelyWebApp/Pages/BlazorMergelySimpleTest.razor)
-* [BlazorMergelyTest](instance/BlazorMergelyWebApp/Pages/BlazorMergelyTest.razor)
-
-Clone this repository locally, navigate to `instance/BlazorMergelyWebApp` and issue the `dotnet run` command.
-
 ## Usage
 
 Update _Host.cshtml file with static file references as follows:
@@ -89,6 +80,15 @@ Then use the component as follows:
 	}
 }
 ```
+
+## Samples
+
+Review the following samples:
+
+* [BlazorMergelySimpleTest](instance/BlazorMergelyWebApp/Pages/BlazorMergelySimpleTest.razor)
+* [BlazorMergelyTest](instance/BlazorMergelyWebApp/Pages/BlazorMergelyTest.razor)
+
+Clone this repository locally, navigate to `instance/BlazorMergelyWebApp` and issue the `dotnet run` command.
 
 ## Release history
 
