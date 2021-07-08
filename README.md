@@ -39,7 +39,10 @@ Update _Host.cshtml file with static file references as follows:
 <component type="typeof(BlazorMergelyJsReferences)" render-mode="Static"/>
 ```
 
-The above may not meet some specific criteria like jQuery version etc. In that case simply add the required static file references manually.
+The above may not meet some specific criteria like jQuery version etc. In that case simply add the required static file references manually:
+
+* [BlazorMergelyCssReferences](src/com.github.akovac35.BlazorMergely/BlazorMergelyCssReferences.razor)
+* [BlazorMergelyJsReferences](src/com.github.akovac35.BlazorMergely/BlazorMergelyJsReferences.cs)
 
 Then use the component as follows:
 
