@@ -29,6 +29,20 @@ Review the following samples:
 
 ## Usage
 
+Update _Host.cshtml file with static file references as follows:
+
+```cshtml
+@* BlazorMergely CSS references *@
+<component type="typeof(BlazorMergelyCssReferences)" render-mode="Static"/>
+
+@* BlazorMergely JS references *@
+<component type="typeof(BlazorMergelyJsReferences)" render-mode="Static"/>
+```
+
+The above may not meet some specific criteria like jQuery version etc. In that case simply add the required static file references manually.
+
+Then use the component as follows:
+
 ```razor
 <div class="form-row">
 	<div class="col-3">
