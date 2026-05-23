@@ -1,12 +1,12 @@
+## ⚠️ Archive Notice
+
+**This repository is archived and no longer actively maintained.** It is provided as-is for reference and educational purposes only. 
+
+If you're looking for an actively maintained Blazor diff/merge solution, please consider exploring alternative packages or forking this repository if you need ongoing support.
+
 # BlazorMergely
 
 An implementation of Blazor diff and merge component based on Mergely with server side support.
-
-![this](Resources/.NET_Core_Logo_small.png)
-
-* [com.github.akovac35.BlazorMergely](https://www.nuget.org/packages/com.github.akovac35.BlazorMergely/)
-
-	[![NuGet Version](http://img.shields.io/nuget/v/com.github.akovac35.BlazorMergely.svg?style=flat)](https://www.nuget.org/packages/com.github.akovac35.BlazorMergely/)
 
 Browser functionality:
 
